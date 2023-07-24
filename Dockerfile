@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
 
 # install fastchat
 RUN python3 -m pip install --upgrade pip && \
+    python3 -m pip install pydantic==1.10.11 && \
     python3 -m pip install . \
     && rm -rf /root/.cache/pip
 
